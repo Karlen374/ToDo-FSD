@@ -1,0 +1,21 @@
+.modal{
+  &__categoryBlock {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  &__items {
+    flex: 1
+  }
+
+}
+
+@media (max-width:625px) {
+  .modal {
+    &__categoryBlock {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom:60px;
+    }
+  }
+}

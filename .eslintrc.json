@@ -1,0 +1,58 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "react"
+    ],
+    "ignorePatterns": ["webpack.config.js"],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "no-mixed-spaces-and-tabs": 0,
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-restricted-imports": [
+            "error",
+            {
+              "patterns": [
+                {
+                  "group": [
+                    "@features/[a-zA-Z]*/[a-zA-Z]*",
+                    "src/features/[a-zA-Z]*/[a-zA-Z]*",
+                    "@entities/[a-zA-Z]*/[a-zA-Z]*",
+                    "src/entities/[a-zA-Z]*/[a-zA-Z]*",
+                    "@widgets/[a-zA-Z]*/[a-zA-Z]*",
+                    "src/widgets/[a-zA-Z]*/[a-zA-Z]*"
+                ],
+                  "message": "You cannot export files other, than those described in index.ts. if you don’t know why, then read https://feature-sliced.design/ "
+                },
+                {
+                    "group": ["src/[a-zA-z]*"],
+                    "message": "use only alias (@) imports"
+                }
+              ]
+            }
+          ]
+    }
+}

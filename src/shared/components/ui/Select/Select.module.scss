@@ -1,0 +1,110 @@
+.select {
+  cursor: pointer;
+  min-width: 245px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+
+  &:hover > & {
+    &__btn {
+      border: 2px solid #257FEA;
+      &:after {
+        border-top-color: #257FEA; 
+      }
+    }
+    &__label {
+        color:#257FEA;
+    }
+  }
+  
+  &__btn {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dbe2ef;
+    border: 2px solid #3f72af;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    height: 46px;
+    color: #000; 
+    
+    &:after {
+      content:"";
+      position: relative;
+      top: 5px;
+      border: 10px solid transparent;
+      border-top: 10px solid #3f72af; 
+    }
+    &_active {
+      border: 2px solid #257FEA;
+
+      &:after {
+        border-top: none;
+        border-bottom: 10px solid #257FEA;
+        top:0;
+      }
+    }
+  }
+  &__placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &__content {
+    position: absolute;
+    top: 49px;
+    background: #dbe2ef;
+    border: 2px solid #257FEA;
+    border-radius: 4px;
+    width: 100%;
+    min-width: 245px;
+    max-height: 142px;
+    overflow-y: auto;
+  }
+  &__item {
+    position: relative;
+    left: -2px;
+    padding: 10px;
+    color: #000;
+    border: none;
+    font-size: 20px;
+    font-family: Roboto;
+    word-break: break-all;
+    &:first-child {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    &:last-child {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    &:hover {
+      background-color: #257FEA4D;
+      
+    }
+    &_active {
+      color: #fff;
+      background-color: #3F72AF;
+    }
+  }
+  &__label{
+    font-style: normal;
+    display: inline-block;
+    background-color: #dbe2ef;
+    font-weight: 400;
+    padding: 4px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #3f72af;
+    position: absolute;
+    left: 12px;
+    top: -15px;  
+   
+    &_active {
+      color:#257FEA;
+    }
+  }
+}
+
+
