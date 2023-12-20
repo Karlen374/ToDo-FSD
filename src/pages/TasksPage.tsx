@@ -1,13 +1,11 @@
 
-import { TasksList } from "@widgets/TasksList";
+import { TasksList } from "@modules/TasksList";
 import React from "react";
 
 const TasksPage = () => {
 
 	return (
-		<div>
-			<TasksList />
-		</div>
+		<TasksList />
 	);
 };
 export default TasksPage;

@@ -1,0 +1,136 @@
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loader{
+  width:100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove{
+  &__title {
+    margin-bottom: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    display: flex;
+    word-break: break-all;
+  }
+}
+
+.task {
+  display:flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-between;
+  padding: 10px 16px 8px;
+  border-bottom: 2px solid #3F72AF;
+  height: 80px;
+
+  &__name{
+    line-height: 20px;
+    max-width: 300px;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  &__icon {
+    min-width: 24px;
+  }
+  &__category {
+    display: flex;
+    gap:4px;
+    margin-left: 16px;
+    align-items: center;
+
+    span {
+      font-family: Roboto;
+      color: #3F72AF;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400; 
+      max-width: 300px;
+      overflow: hidden;
+      word-break: break-all;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    } 
+  }
+  &__headerBlock {
+    display: flex;
+    align-items: center;
+  }
+  &__description {
+    color: #808080;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    line-height: 20px;
+    padding:8px 0 0;
+    white-space: pre-wrap;
+    overflow: hidden;
+    max-width: 300px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+
+  }
+  &__button {
+    background-color: inherit;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  &__buttons {
+    display: flex;
+    column-gap:12px
+  }
+}
+
+@media (max-width:400px) {
+  .task {
+    height: auto;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+
+    &__headerBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap:10px;
+    }
+    &__category {
+      white-space: pre-wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      margin-left: 0;
+      margin: 0 auto;
+      max-width: 200px;
+      height: auto;
+      -webkit-line-clamp: 3;
+      padding: 0;
+    
+    }
+  }
+}

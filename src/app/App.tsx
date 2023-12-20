@@ -1,18 +1,17 @@
 import React from "react";
 import Routing from "./routing/Routing";
-import { ToDoProvider } from "@features/ToDoProvider";
-import { ErrorBoundary } from "@features/ErrorBoundary";
-import { Header } from "@widgets/Header";
+import { Header } from "@modules/Header";
+import { AppOptimizedProvider } from "@shared/store";
+import { ToDoWrapper } from "@modules/ToDoWrapper";
 
 const App = () => {
-
 	return (
-		<ErrorBoundary >
-			<ToDoProvider>
+		<AppOptimizedProvider store={{errorMessage: "", active: false, tasks: null, categories: null}}>
+			<ToDoWrapper>
 				<Header/>
 				<Routing />
-			</ToDoProvider>
-		</ErrorBoundary>
+			</ToDoWrapper>
+		</AppOptimizedProvider>
 	);
 };
 export default App;

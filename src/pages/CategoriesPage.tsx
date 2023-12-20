@@ -1,11 +1,9 @@
-import { CategoriesList } from "@widgets/CategoriesList";
+import { CategoriesList } from "@modules/CategoriesList";
 import React from "react";
 
 const CategoriesPage = () => {
 	return (
-		<div>
-			<CategoriesList />
-		</div>
+		<CategoriesList />
 	);
 };
 export default CategoriesPage;

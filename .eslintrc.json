@@ -32,18 +32,18 @@
             "error",
             "always"
         ],
+        "@typescript-eslint/no-unnecessary-type-constraint": 0,
+        "@typescript-eslint/no-explicit-any": 0,
         "no-restricted-imports": [
             "error",
             {
               "patterns": [
                 {
                   "group": [
-                    "@features/[a-zA-Z]*/[a-zA-Z]*",
-                    "src/features/[a-zA-Z]*/[a-zA-Z]*",
-                    "@entities/[a-zA-Z]*/[a-zA-Z]*",
-                    "src/entities/[a-zA-Z]*/[a-zA-Z]*",
-                    "@widgets/[a-zA-Z]*/[a-zA-Z]*",
-                    "src/widgets/[a-zA-Z]*/[a-zA-Z]*"
+                    "@components/[a-zA-Z]*/[a-zA-Z]*",
+                    "src/components/[a-zA-Z]*/[a-zA-Z]*",
+                    "@modules/[a-zA-Z]*/[a-zA-Z]*",
+                    "src/modules/[a-zA-Z]*/[a-zA-Z]*"
                 ],
                   "message": "You cannot export files other, than those described in index.ts. if you don’t know why, then read https://feature-sliced.design/ "
                 },
